@@ -5,6 +5,10 @@ import org.openqa.selenium.chrome.*;
 
 public class Browser {
 	
+	static {
+		System.setProperty("webdriver.chrome.driver", "");
+	}
+	
 	 private static WebDriver driver = new ChromeDriver();
 	
 	 public static WebDriver driver() {

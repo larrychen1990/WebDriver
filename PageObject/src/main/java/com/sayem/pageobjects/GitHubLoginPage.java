@@ -2,6 +2,7 @@ package com.sayem.pageobjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -16,7 +17,11 @@ public class GitHubLoginPage extends GitHubPage<GitHubLoginPage> {
 	@FindBy(name = "password")
 	WebElement passwordField;
 
-	@FindBy(name = "commit")
+//	@FindBy(name = "commit")
+//	WebElement commitButton;
+	
+	
+	@FindBy(how=How.NAME,using = "commit")
 	WebElement commitButton;
 
 	@FindBy(className = "flash-error")

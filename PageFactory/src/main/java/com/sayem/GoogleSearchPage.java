@@ -1,11 +1,13 @@
 package com.sayem;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
 public class GoogleSearchPage {
 
     @FindBy(name = "q")
+    @CacheLookup
     private WebElement searchBox;
 
     public void searchFor(String text) {

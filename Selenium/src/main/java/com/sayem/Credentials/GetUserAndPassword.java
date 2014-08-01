@@ -1,4 +1,5 @@
-package com.sayem.credentials;
+package com.sayem.Credentials;
+
 
 import org.openqa.selenium.security.UserAndPassword;
 

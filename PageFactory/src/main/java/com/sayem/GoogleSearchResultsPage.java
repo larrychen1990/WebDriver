@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class GoogleSearchResultsPage{
 
-    @FindBy(css = "a.kl")
+    @FindBy(css = ".q.qs")
     WebElement images;
 
     public void clickImages() {
