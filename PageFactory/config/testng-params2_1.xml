@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite2">
+	<test name="T4">
+		<classes>
+			<!-- <class name="com.sayem.pageObjectPattern.automationFramework.param.EnvFactory"></class> -->
+			<!-- <class name="com.sayem.pageObjectPattern.automationFramework.param.BrowserFactory"></class> -->
+			<class name="com.sayem.pageObjectPattern.automationFramework.param.WebTestChild"></class>
+		</classes>
+	</test>
+</suite>

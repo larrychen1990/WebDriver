@@ -1,4 +1,4 @@
-package com.sayem.pageObjectPattern.automationFramework;
+package com.sayem.pageObjectPattern.automationFramework.pageFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -10,8 +10,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Configuration;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.sayem.SeleniumUtil;
@@ -24,8 +28,9 @@ public class PageFactory_TestCase {
 	Home_PG_POF HomePage;
 	LogIn_PG_POF LoginPage;
 
-	@BeforeMethod
+	@BeforeClass
 	public void beforeMethod() {
+		
 		System.setProperty("webdriver.firefox.bin",
 				"./src/main/java/com/sayem/plugin/firefox/Mozilla Firefox/firefox.exe");
 		
@@ -37,8 +42,10 @@ public class PageFactory_TestCase {
 		LoginPage = PageFactory.initElements(driver, LogIn_PG_POF.class);
 	}
 
+//	@Parameters("browser")
 	@Test
 	public void test() {
+//		System.out.println(browser);
 		HomePage.lnk_MyAccount.click();
 		LoginPage.LogIn_Action("testuser_1", "Test@123");
 		
@@ -52,7 +59,7 @@ public class PageFactory_TestCase {
 		HomePage.lnk_LogOut.click();
 	}
 
-	@AfterMethod
+	@AfterClass
 	public void afterMethod() {
 		driver.quit();
 	}
